@@ -2,7 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
   "framework": null,
   "functions": {
     "api/**/*.ts": {
@@ -16,4 +15,3 @@
     { "source": "/", "destination": "/api/index" }
   ]
 }
-
