@@ -1,0 +1,29 @@
+# Render Blueprint Specification for Google Workspace MCP Server
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: google-workspace-mcp
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TRANSPORT
+        value: http
+      - key: GOOGLE_OAUTH_CREDENTIALS_JSON
+        sync: false
+      - key: GOOGLE_OAUTH_TOKEN_JSON
+        sync: false
+      - key: GOOGLE_REFRESH_TOKEN
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GOOGLE_REDIRECT_URI
+        sync: false

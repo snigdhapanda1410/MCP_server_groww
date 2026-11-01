@@ -1,0 +1,38 @@
+{
+  "name": "google-workspace-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server for Google Workspace (Gmail and Google Docs)",
+  "main": "dist/index.js",
+  "bin": {
+    "google-workspace-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "auth": "tsx scripts/authorize.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "google-workspace",
+    "gmail",
+    "google-docs"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.4.0",
+    "dotenv": "^16.4.7",
+    "googleapis": "^144.0.0",
+    "nodemailer": "^10.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "@types/nodemailer": "^6.4.17",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.7"
+  }
+}
